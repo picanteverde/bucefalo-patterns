@@ -1,0 +1,14 @@
+{
+  "name": "bucefalo-patterns",
+  "title": "Bucefalo Patterns",
+  "description": "A collection of usefull coding and architectural patterns and implementations in JavaScript.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/picanteverde/bucefalo-patterns",
+  "author": {
+    "name": "Alejandro Hernandez"
+  },
+  "devDependencies": {
+      "mocha": ">= 1.1.0",
+      "chai": ">= 1.0.4"
+  }
+}
