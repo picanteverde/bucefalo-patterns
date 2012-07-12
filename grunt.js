@@ -13,23 +13,19 @@ module.exports = function(grunt) {
       dist: {
         src: ['<banner:meta.banner>', 
               'src/bucefalo.namespace.js',
-              'src/architecture/publisherSubscriber/pubsub.js'
+              'src/architecture/publisherSubscriber/*.js'
         ],
         dest: 'dist/<%= pkg.name %>.js'
       },
-      module: {
-        src: ['<config:concat.dist.dest>', 'src/bucefalo.module.js'],
-        dest: 'dist/<%= pkg.name %>.module.js'
+      test: {
+        src : ['test/**/**/*.js'],
+        dest: 'test/<%= pkg.name %>.test.js'
       }
     },
     min: {
       dist: {
         src: ['<config:concat.dist.dest>'],
         dest: 'dist/<%= pkg.name %>.min.js'
-      },
-      module: {
-        src: ['<config:concat.module.dest>'],
-        dest: 'dist/<%= pkg.name %>.module.min.js'
       }
     },
     lint: {
