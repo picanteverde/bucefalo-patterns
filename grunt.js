@@ -1,6 +1,6 @@
 /*global module:false*/
 module.exports = function(grunt) {
-
+  
   // Project configuration.
   grunt.initConfig({
     pkg: '<json:package.json>',
@@ -16,7 +16,11 @@ module.exports = function(grunt) {
               'src/architecture/publisherSubscriber/*.js'
         ],
         dest: 'dist/<%= pkg.name %>.js'
-      }/*,
+      },
+      module: {
+          src: ['<config:concat.dist.dest>', 'src/bucefalo.module.js'],
+          dest: 'dist/<%= pkg.name %>.module.js'
+      },/*,
       test: {
         src : ['test/**/**/*.js'],
         dest: 'test/<%= pkg.name %>.test.js'
@@ -60,7 +64,7 @@ module.exports = function(grunt) {
     uglify: {}
   });
 
-  // Default task.
-  grunt.registerTask('default', 'lint concat min');
+    // Default task.
+    grunt.registerTask('default', 'lint concat min');
 
 };
