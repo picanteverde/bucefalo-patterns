@@ -1,6 +1,3 @@
-var expect = require('chai').expect,
-    bucefalo = require('../dist/bucefalo-patterns.module.js');
-
 describe('Publisher Subscriber', function() {
     describe('Publisher', function() {
         var publisher = new pubSub.Publisher();

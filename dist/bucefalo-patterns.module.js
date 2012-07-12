@@ -34,5 +34,7 @@ if(!bucefalo.namespace){
 	};
 
 }
+bucefalo.namespace('bucefalo.patterns.publisherSubscriber.eventManager');
+
 
 module.exports = bucefalo;
