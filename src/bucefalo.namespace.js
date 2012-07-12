@@ -11,6 +11,9 @@ if(!bucefalo.namespace){
 			}());
 		o = global;
 		ar = namespace.split(".");
+		if (object===undefined) {
+			object={};
+		}
 		len = ar.length;
 		for (i = 0; i < len; i += 1){
 			if (!o.hasOwnProperty(ar[i])) {
