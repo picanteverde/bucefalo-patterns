@@ -16,11 +16,11 @@ module.exports = function(grunt) {
               'src/architecture/publisherSubscriber/*.js'
         ],
         dest: 'dist/<%= pkg.name %>.js'
-      },
+      }/*,
       test: {
         src : ['test/**/**/*.js'],
         dest: 'test/<%= pkg.name %>.test.js'
-      }
+      }*/
     },
     min: {
       dist: {
