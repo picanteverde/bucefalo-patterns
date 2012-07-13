@@ -13,7 +13,8 @@ module.exports = function(grunt) {
       dist: {
         src: ['<banner:meta.banner>', 
               'src/bucefalo.namespace.js',
-              'src/architecture/publisherSubscriber/*.js'
+              'src/architecture/publisherSubscriber/*.js',
+              'src/architecture/keyValueObserver/*.js'
         ],
         dest: 'dist/<%= pkg.name %>.js'
       },
