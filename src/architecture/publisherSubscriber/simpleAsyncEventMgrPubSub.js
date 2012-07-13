@@ -1,4 +1,4 @@
-bucefalo.namespace('bucefalo.patterns.publisherSubscriber.eventManager', {
+bucefalo.namespace('bucefalo.patterns.publisherSubscriber.asyncEventManager', {
     createEventManager: function() {
         var events = {};
         return {
