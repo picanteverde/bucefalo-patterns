@@ -15,7 +15,10 @@ bucefalo.namespace('bucefalo.patterns.publisherSubscriber.eventManager', {
                     len = fns.length;
                     for (i = 0; i < len; i += 1) {
                         fn = fns[i];
-                        fn(data);
+                        setTimeout(function() {
+                            fn(data);
+                        }, 0);
+
                     }
                 }
             }
