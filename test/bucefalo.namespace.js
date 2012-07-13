@@ -23,10 +23,10 @@ describe("Bucefalo.namespace", function() {
         expect(hoy.hola.mundo2).to.have.property("z").that.equals(1);
     });
 
-    it("should allow to add new variables to a namespace", function() {
-        bucefalo.patterns.something = {};
+    it("should allow to add new variables to a namespace", function() {        
+        bucefalo.namespace('bucefalo.patterns.something');
         bucefalo.namespace('bucefalo.patterns.publisherSubscriber.eventManager');
-        expect(bucefalo.patterns.publisherSubscriber.eventManager).to.be.ok;
-        expect(bucefalo.patterns.something).to.be.ok;
+        expect(global.bucefalo.patterns.publisherSubscriber.eventManager).to.be.ok;
+        expect(global.bucefalo.patterns.something).to.be.ok;
     });
 });

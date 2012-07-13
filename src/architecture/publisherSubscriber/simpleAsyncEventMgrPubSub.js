@@ -9,16 +9,17 @@ bucefalo.namespace('bucefalo.patterns.publisherSubscriber.eventManager', {
                 events[event].push(fn);
             },
             publish: function(event, data) {
-                var l, i, fns, fn, len;
+                var l, i, fns, fn, len, launchEvent = function(fn, data) {
+                        setTimeout(function() {
+                            fn(data);
+                        }, 0);
+                    };
                 if (events.hasOwnProperty(event)) {
                     fns = events[event];
                     len = fns.length;
                     for (i = 0; i < len; i += 1) {
                         fn = fns[i];
-                        setTimeout(function() {
-                            fn(data);
-                        }, 0);
-
+                        launchEvent(fn, data);
                     }
                 }
             }
